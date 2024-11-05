@@ -5,11 +5,10 @@ import "./App.css";
 
 import { context } from "..";
 
-import Header from "../common/Header";
-import HeaderButton from "../common/HeaderButton";
 import DropOverlay from "../common/DropOverlay";
 import Files from "./Files";
 import WorkSpace from "./WorkSpace";
+import HeaderDefault from "../common/HeaderDefault";
 
 function App() {
   const { workspaces, onFiles } = useContext(context);
@@ -22,11 +21,7 @@ function App() {
 
   return (
     <>
-      <Header>
-        <HeaderButton link="about">About</HeaderButton>
-        <HeaderButton link="upload">Upload</HeaderButton>
-        <HeaderButton link="files">Files</HeaderButton>
-      </Header>
+      <HeaderDefault />
       <main className="FilesApp">
         <article>
           <WorkSpace />

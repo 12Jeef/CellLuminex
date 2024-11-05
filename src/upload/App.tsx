@@ -4,21 +4,16 @@ import "./App.css";
 
 import { context } from "..";
 
-import Header from "../common/Header";
-import HeaderButton from "../common/HeaderButton";
 import DropBox from "../common/DropBox";
 import DropOverlay from "../common/DropOverlay";
+import HeaderDefault from "../common/HeaderDefault";
 
 function App() {
   const { onFiles } = useContext(context);
 
   return (
     <>
-      <Header>
-        <HeaderButton link="about">About</HeaderButton>
-        <HeaderButton link="upload">Upload</HeaderButton>
-        <HeaderButton link="files">Files</HeaderButton>
-      </Header>
+      <HeaderDefault />
       <main className="UploadApp">
         <article>
           <DropBox onInput={onFiles} />
