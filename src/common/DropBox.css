@@ -1,0 +1,55 @@
+div.DropBox {
+  padding: 7.5em;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2em;
+
+  background-color: var(--bg);
+  border-radius: 2em;
+  filter: drop-shadow(0 1rem 1rem var(--shadow));
+
+  transition: background-color 0.25s;
+}
+div.DropBox.active {
+  background-color: var(--accent);
+}
+
+div.DropBox > button {
+  padding: 0.75em 1.5em;
+
+  background-color: var(--accent);
+  border-radius: 1em;
+
+  color: var(--bg);
+
+  font-size: 1.5em;
+  font-weight: 600;
+
+  transition: background-color 0.25s, color 0.25s;
+}
+div.DropBox > button:disabled {
+  background-color: var(--accenta);
+}
+div.DropBox > button:not(:disabled):hover {
+  background-color: var(--accent2);
+}
+div.DropBox.active > button {
+  background-color: var(--fg);
+  color: var(--accent);
+}
+
+div.DropBox > span {
+  color: var(--fg2);
+
+  font-size: 1.25em;
+
+  transition: color 0.25s;
+}
+div.DropBox.active > span {
+  color: var(--fg);
+}

@@ -1,0 +1,42 @@
+main.AboutApp {
+  overflow: auto;
+}
+main.AboutApp > article {
+  align-self: center;
+
+  min-width: 0;
+  max-width: 65rem;
+  padding-top: 5em;
+  padding-bottom: 15em;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 1em;
+}
+main.AboutApp > article > button.Logo {
+  align-self: center;
+
+  font-size: 5em;
+}
+main.AboutApp > article > h3 {
+  margin-top: 2.5em;
+
+  font-size: 2em;
+  font-weight: 800;
+}
+main.AboutApp > article > p {
+  color: var(--fg2);
+
+  font-size: 1.25em;
+  line-height: 2em;
+}
+main.AboutApp > article > p > span.asterix {
+  color: var(--fg2a);
+
+  font-size: 0.75em;
+}

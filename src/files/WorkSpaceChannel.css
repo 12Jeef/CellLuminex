@@ -1,0 +1,102 @@
+section.WorkSpaceChannel {
+  --color: var(--fg);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center;
+
+  border-left: 0.25em solid var(--color);
+
+  transition: border-left 0.25s;
+}
+section.WorkSpaceChannel.r {
+  --color: var(--r);
+}
+section.WorkSpaceChannel.g {
+  --color: var(--g);
+}
+section.WorkSpaceChannel.b {
+  --color: var(--b);
+}
+section.WorkSpaceChannel.y {
+  --color: var(--y);
+}
+section.WorkSpaceChannel.c {
+  --color: var(--c);
+}
+section.WorkSpaceChannel.m {
+  --color: var(--m);
+}
+section.WorkSpaceChannel.w {
+  --color: var(--fg);
+}
+section.WorkSpaceChannel:has(> section.main > button:first-child:hover) {
+  border-left: 0.5em solid var(--color);
+}
+
+section.WorkSpaceChannel > section.main {
+  padding: 0 1em;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 0.75em;
+
+  background-color: var(--bg);
+
+  transition: background-color 0.25s;
+}
+section.WorkSpaceChannel > section.main:has(> button:first-child:hover) {
+  background-color: var(--bg2);
+}
+
+section.WorkSpaceChannel > section.main > button:first-child {
+  flex-basis: 100%;
+  align-self: stretch;
+
+  height: 3em;
+
+  background-color: transparent;
+
+  font-size: 1em;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+}
+section.WorkSpaceChannel > section.main > button:not(:first-child) {
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: transparent;
+
+  transition: filter 0.25s;
+}
+section.WorkSpaceChannel > section.main > button:not(:first-child):hover {
+  filter: brightness(1.25);
+}
+section.WorkSpaceChannel > section.main > button:not(:first-child) > ion-icon {
+  font-size: 1.25em;
+}
+
+section.WorkSpaceChannel > section.main > span:has(> input) {
+  flex-basis: 50%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}

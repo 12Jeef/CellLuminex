@@ -1,0 +1,18 @@
+div.WorkSpaceDisplay {
+  overflow: hidden;
+
+  position: relative;
+
+  background-color: var(--bg);
+  border-radius: 1em;
+}
+div.WorkSpaceDisplay > canvas {
+  display: block;
+}
+div.WorkSpaceDisplay > canvas:not(:first-child) {
+  z-index: 100000;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}

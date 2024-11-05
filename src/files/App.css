@@ -1,0 +1,11 @@
+main.FilesApp {
+  --files: 8rem;
+}
+
+main.FilesApp > article:first-child {
+  max-height: calc(100vh - var(--header));
+
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+}

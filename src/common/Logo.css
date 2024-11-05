@@ -1,0 +1,21 @@
+button.Logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 0;
+
+  background-color: transparent;
+
+  font-weight: 800;
+  font-size: 2em;
+  letter-spacing: -0.02em;
+}
+button.Logo > span {
+  color: var(--fg);
+}
+button.Logo > span:first-child {
+  color: var(--accent);
+}
