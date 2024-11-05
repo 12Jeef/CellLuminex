@@ -72,7 +72,7 @@ function App() {
             same task: count transfection efficiency of a
             immunofluorescently-dyed image. All other three lab groups manually
             counted. I was lab lead, and being lazy, wrote a python program that
-            performed just steps 1 and 3 of the process above. It was accurate
+            performed just steps 3 and 4 of the process above. It was accurate
             enough for the time, but I wanted to develop the algorithm further.
             And here we are!
           </p>
