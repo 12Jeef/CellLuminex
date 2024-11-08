@@ -9,6 +9,7 @@ import alertCircleOutline from "ionicons/dist/svg/alert-circle-outline.svg";
 import { serializeWorkspace, hashWorkspace, encodeWorkspace } from "../types";
 
 import { context } from "..";
+import { appContext } from "./App";
 
 import WorkSpaceDisplay from "./WorkSpaceDisplay";
 import {
@@ -133,13 +134,14 @@ function StepSection(options: {
 function WorkSpace() {
   const { workspaces, addWorkspace, activeWorkspace } = useContext(context);
 
+  const { layer, setLayer, openOverlay } = useContext(appContext);
+
   const workspace = activeWorkspace ? workspaces[activeWorkspace] : undefined;
   const step = workspace?.step ?? 0;
   const hash = workspace ? hashWorkspace(workspace) : null;
 
   const [maxWidth, setMaxWidth] = useState(0);
   const [maxHeight, setMaxHeight] = useState(0);
-  const [layer, setLayer] = useState(0);
 
   const dataRef = useRef(new Uint8Array());
   const hashRef = useRef(0);
@@ -196,7 +198,12 @@ function WorkSpace() {
 
   return (
     <div className="WorkSpace" ref={ref}>
-      <div className="display">
+      <div
+        className="display"
+        onClick={() => {
+          openOverlay();
+        }}
+      >
         <WorkSpaceDisplay
           id={activeWorkspace}
           step={step}

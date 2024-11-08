@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { lazy, useContext, useEffect, useRef } from "react";
 
 import "./WorkSpaceDisplay.css";
 
@@ -461,9 +461,10 @@ function WorkSpaceDisplay(options: {
     step,
     maxWidth,
     maxHeight,
+    outputLayers,
+    renderDebounce,
     glRenderDebounce,
     ctxRenderDebounce,
-    renderDebounce,
     onRender,
   ]);
 

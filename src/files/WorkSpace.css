@@ -40,6 +40,8 @@ div.WorkSpace > div.display::before {
 }
 
 div.WorkSpace > div.display > div.info {
+  z-index: 1;
+
   position: absolute;
   top: 1rem;
   left: 1rem;
