@@ -1,6 +1,8 @@
-# CellLuminex
+<a href="https://cell-luminex.vercel.app/"><img src="./banner.svg" width="100%"></a>
 
-Fluorescent Cell Calculator and Counter
+<div align="center">
+    <p>Fluorescent Cell Calculator and Counter</p>
+</div>
 
 ## Purpose
 
